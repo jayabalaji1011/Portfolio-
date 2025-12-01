@@ -188,7 +188,10 @@
     /* DARK MODE */
     body.dark-mode { background: #111; color: #f9f9f9; }
     body.dark-mode nav { background: #222; }
-    body.dark-mode .hero { background: linear-gradient(135deg, #081229 0%, #0b1220 100%); color: #e6eef9; }
+    body.dark-mode .hero {
+  background: #0b0b0d; /* Deep dark background */
+  color: #e6eef9;
+}
     body.dark-mode .hero span { color: #7cc7ff; }
     body.dark-mode .btn { background: #0ea5e9; color: #041626; }
     body.dark-mode .project-card { background: #1a1a1a; color: #d9e6f2; }
@@ -210,7 +213,17 @@
       z-index: 999;
       transition: background 0.3s ease, color 0.3s ease;
     }
+    
+    body.dark-mode .hero .btn {
+  background: #1e293b;  /* Smooth dark button */
+  color: #e6eef9;
+  border: 1px solid #475569;
+}
+body.dark-mode .hero .btn:hover {
+  background: #334155;
+}
 
+    
     /* Animation */
     .fade-up { opacity: 0; transform: translateY(20px); animation: fadeUp 0.8s forwards; }
     @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
