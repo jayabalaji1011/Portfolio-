@@ -1,141 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jayabalaji • Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jayabalaji • Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
+  <style>
+
+  </style>
 </head>
 
 <body>
+  <nav>
+    <a href="#" class="logo">Jayabalaji</a>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
-    <!-- HERO -->
-    <section class="hero">
-        <h1 class="fade">Hi, I'm <span>Jayabalaji</span></h1>
-        <p class="fade">Python Developer • Django Developer • Backend Developer</p>
-        <a href="#projects" class="btn fade">View My Projects</a>
-    </section>
+  <section class="hero">
+    <h1>Hi, I'm <span>Jayabalaji</span></h1>
+    <p>Python Developer • Django Developer • Backend Developer</p>
+    <a href="#projects" class="btn">View My Projects</a>
+  </section>
 
-    <!-- ABOUT -->
-    <section class="container about">
-        <h2>About Me</h2>
-        <p>
-            I am a fresher Python & Django Developer with a strong interest in backend development,
-            databases, and building clean and efficient full-stack applications.  
-            I create real-world projects such as hospital systems, banking apps, and educational platforms.
-        </p>
-    </section>
+  <section id="about" class="container about">
+    <h2>About Me</h2>
+    <p>
+      I am a fresher Python & Django Developer passionate about backend development,
+      databases, and full-stack applications. I build real-world projects like hospital systems,
+      banking apps, and educational platforms.
+    </p>
+  </section>
 
-    <!-- SKILLS -->
-    <section class="container skills">
-        <h2>Skills</h2>
-        <ul class="skills-list">
-            <li>⭐ Programming
-                <ul>
-                    <li>Python</li>
-                    <li>JavaScript (project use)</li>
-                </ul>
-            </li>
-            <li>⭐ Backend
-                <ul>
-                    <li>Django</li>
-                    <li>REST API (basic)</li>
-                </ul>
-            </li>
-            <li>⭐ Frontend
-                <ul>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>Bootstrap (basics)</li>
-                </ul>
-            </li>
-            <li>⭐ Database
-                <ul>
-                    <li>SQLite</li>
-                    <li>MySQL (beginner)</li>
-                </ul>
-            </li>
-            <li>⭐ Tools
-                <ul>
-                    <li>Git</li>
-                    <li>GitHub</li>
-                </ul>
-            </li>
-            <li>⭐ Concepts
-                <ul>
-                    <li>OOPs</li>
-                    <li>CRUD Operations</li>
-                    <li>MVC / MVT Structure</li>
-                </ul>
-            </li>
-        </ul>
-    </section>
+  <section id="skills" class="container skills">
+    <h2>Skills</h2>
+    <ul class="skills-list">
+      <li>⭐ Programming
+          <ul>
+              <li>Python</li>
+              <li>JavaScript (project use)</li>
+          </ul>
+      </li>
+      <li>⭐ Backend
+          <ul>
+              <li>Django</li>
+              <li>REST API (basic)</li>
+          </ul>
+      </li>
+      <li>⭐ Frontend
+          <ul>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>Bootstrap (basics)</li>
+          </ul>
+      </li>
+      <li>⭐ Database
+          <ul>
+              <li>SQLite</li>
+              <li>MySQL (beginner)</li>
+          </ul>
+      </li>
+      <li>⭐ Tools
+          <ul>
+              <li>Git</li>
+              <li>GitHub</li>
+          </ul>
+      </li>
+      <li>⭐ Concepts
+          <ul>
+              <li>OOPs</li>
+              <li>CRUD Operations</li>
+              <li>MVC / MVT Structure</li>
+          </ul>
+      </li>
+    </ul>
+  </section>
 
-    <!-- PROJECTS -->
-    <section class="container" id="projects">
-        <h2>Projects</h2>
+  <section id="projects" class="container">
+    <h2>Projects</h2>
+    <div class="project-card">
+      <h3>Hospital Management System</h3>
+      <p>CRUD-based appointment and staff management system with database integration.</p>
+      <a href="YOUR_GITHUB_LINK" class="project-link">View on GitHub →</a>
+    </div>
 
-        <div class="project-card">
-            <h3>Hospital Management System</h3>
-            <p>
-                CRUD-based appointment and staff management system with database integration.
-            </p>
-            <a href="YOUR_GITHUB_LINK" class="project-link">View on GitHub →</a>
-        </div>
+    <div class="project-card">
+      <h3>Edulink</h3>
+      <p>Student & staff management with assignment module and admin panel.</p>
+      <a href="YOUR_GITHUB_LINK" class="project-link">View on GitHub →</a>
+    </div>
 
-        <div class="project-card">
-            <h3>Edulink</h3>
-            <p>
-                Student & staff management with assignment module and admin panel.
-            </p>
-            <a href="YOUR_GITHUB_LINK" class="project-link">View on GitHub →</a>
-        </div>
+    <div class="project-card">
+      <h3>Digital Bank App</h3>
+      <p>Banking operations: create account, deposit, withdraw, mini-statement, admin features.</p>
+      <a href="YOUR_GITHUB_LINK" class="project-link">View on GitHub →</a>
+    </div>
+  </section>
 
-        <div class="project-card">
-            <h3>Digital Bank App</h3>
-            <p>
-                Banking operations: create account, deposit, withdraw, mini-statement, admin features.
-            </p>
-            <a href="YOUR_GITHUB_LINK" class="project-link">View on GitHub →</a>
-        </div>
-    </section>
+  <section class="container certificates">
+    <h2>Certificates</h2>
+    <ul>
+      <li>Full Stack Python Development</li>
+      <li>Python Programming</li>
+      <li>Django Framework</li>
+    </ul>
+  </section>
 
-    <!-- CERTIFICATES -->
-    <section class="container certificates">
-        <h2>Certificates</h2>
-        <ul>
-            <li>Full Stack Python Development</li>
-            <li>Python Programming</li>
-            <li>Django Framework</li>
-        </ul>
-    </section>
+  <section class="container resume">
+    <h2>Resume</h2>
+    <a class="btn" href="resume.pdf" download>Download My Resume</a>
+  </section>
 
-    <!-- RESUME -->
-    <section class="container resume">
-        <h2>Resume</h2>
-        <a class="btn" href="resume.pdf" download>Download My Resume</a>
-    </section>
+  <section id="contact" class="container contact">
+    <h2>Contact</h2>
+    <p>Email: yourmail@example.com</p>
+    <p>Phone: +91 XXXXXXXXXX</p>
+    <p>GitHub: github.com/YOURNAME</p>
+    <p>LinkedIn: linkedin.com/in/YOURNAME</p>
+  </section>
 
-    <!-- CONTACT -->
-    <section class="container contact">
-        <h2>Contact</h2>
-        <p>Email: yourmail@example.com</p>
-        <p>Phone: +91 XXXXXXXXXX</p>
-        <p>GitHub: github.com/YOURNAME</p>
-        <p>LinkedIn: linkedin.com/in/YOURNAME</p>
-    </section>
-
-    <!-- FOOTER -->
-    <footer>
-        <p>© 2025 Jayabalaji. All Rights Reserved.</p>
-    </footer>
-
-</body>
-</html>    <section class="container contact">
-        <h2>Contact</h2>
-        <p>Email: yourmail@example.com</p>
-        <p>GitHub: github.com/YOURNAME</p>
-    </section>
-
+  <footer>
+    © 2025 Jayabalaji. All Rights Reserved.
+  </footer>
 </body>
 </html>
