@@ -1,3 +1,4 @@
+<!-- Updated modern and stylish portfolio HTML and CSS in one file -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -76,6 +77,7 @@
       text-align: center;
       background: linear-gradient(135deg, white 0%, #f2f2f2 100%);
       padding: 20px;
+      animation: fadeIn 1s ease-out;
     }
 
     .hero h1 {
@@ -161,12 +163,22 @@
       font-weight: 600;
     }
 
+    /* FOOTER */
     footer {
       text-align: center;
       padding: 25px;
       background: var(--dark);
       color: white;
       font-size: 14px;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
     }
 
     /* RESPONSIVE */
@@ -188,11 +200,28 @@
       }
     }
   </style>
+  <style>
+    /* DARK MODE */
+    body.dark-mode { background: #111; color: #f9f9f9; transition: background 0.4s ease, color 0.4s ease; }
+    .project-card, nav, footer { transition: background 0.4s ease, color 0.4s ease; }
+    body.dark-mode nav { background:#222; }
+    body.dark-mode .project-card { background:#1a1a1a; }
+    body.dark-mode footer { background:#000; }
+    /* Button */
+    .dark-toggle { position: fixed; bottom:20px; right:20px; padding:10px 15px; border-radius:20px; background: var(--primary); color:#fff; border:none; cursor:pointer; font-weight:600; box-shadow:0 4px 10px rgba(0,0,0,0.2); z-index:999; }
+    /* Animation */
+    .fade-up { opacity:0; transform:translateY(20px); animation: fadeUp 0.8s forwards; }
+    @keyframes fadeUp { to { opacity:1; transform:translateY(0); } }
+  </style>
+  <script>
+    function toggleDarkMode() { document.body.classList.toggle('dark-mode'); }
+    window.onload = () => {
+      document.querySelectorAll('.project-card').forEach((el,i)=>{ el.classList.add('fade-up'); el.style.animationDelay = (i*0.2)+'s'; });
+    };
+  </script>
 </head>
 
 <body>
-
-  <!-- NAVIGATION -->
   <nav>
     <a href="#" class="logo">Jayabalaji</a>
     <ul>
@@ -203,15 +232,13 @@
     </ul>
   </nav>
 
-  <!-- HERO -->
   <section class="hero">
     <h1>Hi, I'm <span>Jayabalaji</span></h1>
     <p>Python Developer • Django Developer • Backend Developer</p>
     <a href="#projects" class="btn">View My Projects</a>
   </section>
 
-  <!-- ABOUT -->
-  <section id="about" class="container">
+  <section id="about" class="container about">
     <h2>About Me</h2>
     <p>
       I am a fresher Python & Django Developer passionate about backend development,
@@ -220,52 +247,50 @@
     </p>
   </section>
 
-  <!-- SKILLS -->
-  <section id="skills" class="container">
+  <section id="skills" class="container skills">
     <h2>Skills</h2>
     <ul class="skills-list">
       <li>⭐ Programming
-        <ul>
-          <li>Python</li>
-          <li>JavaScript (project use)</li>
-        </ul>
+          <ul>
+              <li>Python</li>
+              <li>JavaScript (project use)</li>
+          </ul>
       </li>
       <li>⭐ Backend
-        <ul>
-          <li>Django</li>
-          <li>REST API (basic)</li>
-        </ul>
+          <ul>
+              <li>Django</li>
+              <li>REST API (basic)</li>
+          </ul>
       </li>
       <li>⭐ Frontend
-        <ul>
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>Bootstrap (basics)</li>
-        </ul>
+          <ul>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>Bootstrap (basics)</li>
+          </ul>
       </li>
       <li>⭐ Database
-        <ul>
-          <li>SQLite</li>
-          <li>MySQL (beginner)</li>
-        </ul>
+          <ul>
+              <li>SQLite</li>
+              <li>MySQL (beginner)</li>
+          </ul>
       </li>
       <li>⭐ Tools
-        <ul>
-          <li>Git</li>
-          <li>GitHub</li>
-        </ul>
+          <ul>
+              <li>Git</li>
+              <li>GitHub</li>
+          </ul>
       </li>
       <li>⭐ Concepts
-        <ul>
-          <li>OOPs</li>
-          <li>CRUD Operations</li>
-          <li>MVC / MVT Structure</li>
-        </ul>
+          <ul>
+              <li>OOPs</li>
+              <li>CRUD Operations</li>
+              <li>MVC / MVT Structure</li>
+          </ul>
       </li>
     </ul>
   </section>
 
-  <!-- PROJECTS -->
   <section id="projects" class="container">
     <h2>Projects</h2>
     <div class="project-card">
@@ -273,11 +298,13 @@
       <p>CRUD-based appointment and staff management system with database integration.</p>
       <a href="YOUR_GITHUB_LINK" class="project-link">View on GitHub →</a>
     </div>
+
     <div class="project-card">
       <h3>Edulink</h3>
       <p>Student & staff management with assignment module and admin panel.</p>
       <a href="YOUR_GITHUB_LINK" class="project-link">View on GitHub →</a>
     </div>
+
     <div class="project-card">
       <h3>Digital Bank App</h3>
       <p>Banking operations: create account, deposit, withdraw, mini-statement, admin features.</p>
@@ -285,8 +312,7 @@
     </div>
   </section>
 
-  <!-- CERTIFICATES -->
-  <section class="container">
+  <section class="container certificates">
     <h2>Certificates</h2>
     <ul>
       <li>Full Stack Python Development</li>
@@ -295,25 +321,22 @@
     </ul>
   </section>
 
-  <!-- RESUME -->
-  <section class="container">
+  <section class="container resume">
     <h2>Resume</h2>
     <a class="btn" href="resume.pdf" download>Download My Resume</a>
   </section>
 
-  <!-- CONTACT -->
-  <section id="contact" class="container">
+  <section id="contact" class="container contact">
     <h2>Contact</h2>
     <p>Email: yourmail@example.com</p>
-    <p>Phone: +91 XXXXXXXX</p>
+    <p>Phone: +91 XXXXXXXXXX</p>
     <p>GitHub: github.com/YOURNAME</p>
     <p>LinkedIn: linkedin.com/in/YOURNAME</p>
   </section>
 
-  <!-- FOOTER -->
   <footer>
     © 2025 Jayabalaji. All Rights Reserved.
   </footer>
-
+  <button onclick="toggleDarkMode()" class="dark-toggle">🌙 Dark Mode</button>
 </body>
 </html>
